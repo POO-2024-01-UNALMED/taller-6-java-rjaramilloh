@@ -4,33 +4,30 @@ import java.util.ArrayList;
 
 public class Pais {
 	private String nombre;
-	private static ArrayList<Pais> Ecuador=new ArrayList<>();
-	private static ArrayList<Pais> USA=new ArrayList<>();
-	private static ArrayList<Pais> Canada=new ArrayList<>();
+	private static int mayor = 0;
+	private static int ocurrencia;
+	private static Pais paisMasVendedor;
+	private static ArrayList<Pais> paises=new ArrayList<>();
 
 	public Pais(String nombre) {
 		this.nombre = nombre;
-		if (nombre.equalsIgnoreCase("Ecuador")) {
-			Ecuador.add(this);
-		}
-		else if (nombre.equalsIgnoreCase("USA")) {
-			USA.add(this);
-		}
-		else {
-			Canada.add(this);
-		}
+		paises.add(this);
 	}
 	
 	public static Pais paisMasVendedor() {
-		if((Ecuador.size()>USA.size())&&(Ecuador.size()>Canada.size())) {
-			return Ecuador.get(0);
+		for (int i=0;i<paises.size();i++) {
+			ocurrencia=0;
+			for (int j=0;j<paises.size();j++) {
+				if(paises.get(i).equals(paises.get(j))) {
+					ocurrencia=ocurrencia+1;
+				}
+			}
+			if(ocurrencia>=mayor) {
+				mayor=ocurrencia;
+				paisMasVendedor=paises.get(i);
+			}
 		}
-		else if((USA.size()>Ecuador.size())&&(USA.size()>Canada.size())) {
-			return USA.get(0);
-		}
-		else {
-			return Canada.get(0);
-		}
+		return paisMasVendedor;
 	}
 	
 
@@ -40,6 +37,38 @@ public class Pais {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public static int getMayor() {
+		return mayor;
+	}
+
+	public static void setMayor(int mayor) {
+		Pais.mayor = mayor;
+	}
+
+	public static int getOcurrencia() {
+		return ocurrencia;
+	}
+
+	public static void setOcurrencia(int ocurrencia) {
+		Pais.ocurrencia = ocurrencia;
+	}
+
+	public static Pais getPaisMasVendedor() {
+		return paisMasVendedor;
+	}
+
+	public static void setPaisMasVendedor(Pais paisMasVendedor) {
+		Pais.paisMasVendedor = paisMasVendedor;
+	}
+
+	public static ArrayList<Pais> getPaises() {
+		return paises;
+	}
+
+	public static void setPaises(ArrayList<Pais> paises) {
+		Pais.paises = paises;
 	}
 	
 	
