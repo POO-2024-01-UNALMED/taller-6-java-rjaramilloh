@@ -21,15 +21,15 @@ public class Pais {
 		}
 	}
 	
-	public static String paisMasVendedor() {
+	public static Pais paisMasVendedor() {
 		if((Ecuador.size()>USA.size())&&(Ecuador.size()>Canada.size())) {
-			return "Ecuador";
+			return Ecuador.get(0);
 		}
 		else if((USA.size()>Ecuador.size())&&(USA.size()>Canada.size())) {
-			return "USA";
+			return USA.get(0);
 		}
 		else {
-			return "Canada";
+			return Canada.get(0);
 		}
 	}
 	

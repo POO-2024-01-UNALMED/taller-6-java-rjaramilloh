@@ -26,18 +26,18 @@ public class Fabricante {
 		}
 	}
 
-	public static String fabricaMayorVentas() {
+	public static Fabricante fabricaMayorVentas() {
 		if((Renault.size()>Chevrolet.size())&&(Renault.size()>Tesla.size())&&(Renault.size()>Volvo.size())) {
-			return "Renault";
+			return Renault.get(0);
 		}
 		else if((Chevrolet.size()>Renault.size())&&(Chevrolet.size()>Tesla.size())&&(Chevrolet.size()>Volvo.size())) {
-			return "Chevrolet";
+			return Chevrolet.get(0);
 		}
 		else if((Tesla.size()>Renault.size())&&(Tesla.size()>Chevrolet.size())&&(Tesla.size()>Volvo.size())) {
-			return "Tesla";
+			return Tesla.get(0);
 		}
 		else {
-			return "Volvo";
+			return Volvo.get(0);
 		}
 	}	
 	public String getNombre() {
