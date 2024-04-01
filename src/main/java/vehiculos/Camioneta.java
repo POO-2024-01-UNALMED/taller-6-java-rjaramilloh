@@ -12,6 +12,7 @@ public class Camioneta extends Vehiculo{
 		this.traccion="4X4";
 		this.volco = volco;
 		Camioneta.listado.add(this);
+		Fabricante.agrgarFabricante(fabricante);
 	}
 
 	public boolean isVolco() {

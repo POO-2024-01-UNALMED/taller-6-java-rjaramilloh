@@ -13,6 +13,7 @@ public class Camion extends Vehiculo {
 		this.velocidadMaxima=80;
 		this.ejes=ejes;
 		Camion.listado.add(this);
+		Fabricante.agrgarFabricante(fabricante);
 	}
 	public int getEjes() {
 		return ejes;

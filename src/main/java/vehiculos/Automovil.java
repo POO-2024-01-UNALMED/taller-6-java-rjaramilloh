@@ -13,6 +13,7 @@ public class Automovil extends Vehiculo{
 		this.traccion="FWD";
 		this.puestos=puestos;
 		Automovil.listado.add(this);
+		Fabricante.agrgarFabricante(fabricante);
 	}
 	
 	public int getPuestos() {

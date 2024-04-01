@@ -11,8 +11,7 @@ public class Fabricante {
 	private static ArrayList<Fabricante> fabricantes=new ArrayList<>();
 	public Fabricante(String nombre, Pais pais) {
 		this.nombre = nombre;
-		this.pais = pais;
-		fabricantes.add(this);
+		this.pais = pais;	
 	}
 
 	public static Fabricante fabricaMayorVentas() {
@@ -29,7 +28,13 @@ public class Fabricante {
 			}
 		}
 		return fabricaMayorVenta;
-	}	
+	}
+	
+	public static void agrgarFabricante(Fabricante fabricante) {
+		fabricantes.add(fabricante);
+		Pais.agregarPais(fabricante.getPais());
+		}
+	
 	public String getNombre() {
 		return nombre;
 	}

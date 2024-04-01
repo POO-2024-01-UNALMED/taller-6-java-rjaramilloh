@@ -11,7 +11,6 @@ public class Pais {
 
 	public Pais(String nombre) {
 		this.nombre = nombre;
-		paises.add(this);
 	}
 	
 	public static Pais paisMasVendedor() {
@@ -30,6 +29,9 @@ public class Pais {
 		return paisMasVendedor;
 	}
 	
+	public static void agregarPais(Pais pais) {
+		paises.add(pais);
+	}
 
 	public String getNombre() {
 		return nombre;
