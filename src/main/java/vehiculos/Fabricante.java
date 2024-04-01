@@ -19,7 +19,7 @@ public class Fabricante {
 		for (int i=0;i<fabricantes.size();i++) {
 			ocurrencia=0;
 			for (int j=0;j<fabricantes.size();j++) {
-				if(fabricantes.get(i).equals(fabricantes.get(j))) {
+				if(fabricantes.get(i).getNombre().equals(fabricantes.get(j).getNombre())) {
 					ocurrencia=ocurrencia+1;
 				}
 			}
@@ -58,25 +58,14 @@ public class Fabricante {
 		return mayor;
 	}
 
-	public void setMayor(int mayor) {
-		this.mayor = mayor;
-	}
-
 	public int getOcurrencia() {
 		return ocurrencia;
-	}
-
-	public void setOcurrencia(int ocurrencia) {
-		this.ocurrencia = ocurrencia;
 	}
 
 	public Fabricante getFabricaMayorVenta() {
 		return fabricaMayorVenta;
 	}
 
-	public void setFabricaMayorVenta(Fabricante fabricaMayorVenta) {
-		this.fabricaMayorVenta = fabricaMayorVenta;
-	}
 	
 	
 

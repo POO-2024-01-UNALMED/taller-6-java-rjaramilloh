@@ -18,7 +18,7 @@ public class Pais {
 		for (int i=0;i<paises.size();i++) {
 			ocurrencia=0;
 			for (int j=0;j<paises.size();j++) {
-				if(paises.get(i).equals(paises.get(j))) {
+				if(paises.get(i).getNombre().equals(paises.get(j).getNombre())) {
 					ocurrencia=ocurrencia+1;
 				}
 			}
